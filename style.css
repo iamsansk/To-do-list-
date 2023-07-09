@@ -1,0 +1,138 @@
+@font-face {
+    font-family: Poppins;
+    src: url("Poppins-Medium.ttf");
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: #DA627D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toDoApp{
+    height: 83vh;
+    max-width: 350px;
+    width: 100%;
+    background-color: #F9DBBD;
+    padding: 15px;
+    padding-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: rgba(60,64,67,0.3) 0px 1px 2px 0px,rgba(60,64,67,0.15) 0px 2px 6px 2px;
+}
+.toDoApp p{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+    color: #fb8d62;
+    font-size: 1.25rem;
+}
+.toDoApp .inputArea{
+    width: 100%;
+}
+.toDoApp .inputArea input{
+    height: 35px;
+    width: 80%;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    padding: 5px;
+}
+.toDoApp .inputArea button{
+    height: 35px;
+    width: 18%;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: #9A348E;
+    color: white;
+    transition: 0.5s ease-in;
+}
+.toDoApp .invalidMsg{
+    display: block;
+    height: 15px;
+    width: 100%;
+    position: relative;
+}
+.toDoApp .invalidMsg #invalid{
+    position: absolute;
+    font-size: 0.9rem;
+    color: red;
+}
+.toDoApp .inputArea button:hover{
+    border: 2px solid #9A348E;
+    color: #9A348E;
+    background: transparent;
+    transition: 0.5s;
+}
+.toDoApp .toDoList{
+    height: 80%;
+}
+.toDoApp .toDoList #list{
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 5px;
+    margin-top: 5px;
+}
+.toDoApp .toDoList #list li{
+    margin-top: 10px;
+    padding-bottom: 5px;
+    list-style-type: none;
+    border-bottom: 1px solid #9A348E;
+    cursor: pointer;
+    position: relative;
+
+}
+.toDoApp .toDoList #list li label{
+    cursor: pointer;
+    text-wrap:wrap;
+}
+.toDoApp .toDoList #list li i{
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    right: 10px;
+    top: 0;
+    margin-left: 3px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toDoApp .toDoList #list li i::before{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 13px;
+    background-color: white;
+    transform: rotate(45deg);
+}
+.toDoApp .toDoList #list li i::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 13px;
+    background-color: white;
+    transform: rotate(-45deg);
+}
+
+.toDoApp input:checked~ label{
+    text-decoration: line-through;
+}
+::-webkit-scrollbar{
+    border: 1px solid #DA627D;
+    border-radius: 10px;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #DA627D;
+    border-radius: 10px;
+}
