@@ -36,8 +36,7 @@ function removeItem(index){
     if(index>-1){
         listArr.splice(index,1);
         localStorage.setItem("todos",JSON.stringify(listArr));
-        listArr=[];
-        //location.reload();
+        location.reload();
     }
     updateList(index);
 }
