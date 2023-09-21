@@ -32,8 +32,8 @@ function addItems() {
 function displayTodo(todo) {
     const listItem = document.createElement("li");
     listItem.innerHTML = `
-        <input type="checkbox" id='label'>
-        <label for='label'>${todo}</label>
+        <input type="checkbox">
+        <label>${todo}</label>
         <i class="remove-btn"></i>`;
     list.appendChild(listItem);
 }
